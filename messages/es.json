@@ -1,0 +1,28 @@
+{
+  "shared": {
+    "confirm": "Mensaje de confirmación"
+  },
+  "home": {
+    "static": "¡Hola mundo del hogar!",
+    "interpolation": "¡Hola {name}!",
+    "plural": "Tienes {numMessages, plural, =0 {ningún mensaje} =1 {un mensaje} other {# mensajes}}.",
+    "select": "{gender, select, female {Ella} male {Él} other {Ellos}} está en línea.",
+    "selectordinal": "¡Es tu {year, selectordinal, one {#er} two {#do} few {#er} other {#to}} cumpleaños!",
+    "escaped": "Escapa las llaves con comillas simples (por ejemplo, '{name'})"
+  },
+  "question": {
+    "static": "¡Hola mundo!",
+    "interpolation": "¡Hola {name}!",
+    "plural": "Tienes {numMessages, plural, =0 {ningún mensaje} =1 {un mensaje} other {# mensajes}}.",
+    "select": "{gender, select, female {Ella} male {Él} other {Ellos}} está en línea.",
+    "selectordinal": "¡Es tu {year, selectordinal, one {#er} two {#do} few {#er} other {#to}} cumpleaños!",
+    "escaped": "Escapa las llaves con comillas simples (ejemplo. '{name'})",
+    "richText": "Esto es <important><very>muy</very> importante</important>",
+    "zero-config": "Funciona sin necesidad de configuración",
+    "customizable": "Fácil de personalizar",
+    "fast": "Increíblemente rápido",
+    "Benefits": {
+      "items": "<item>Funciona sin necesidad de configuración</item><item>Fácil de personalizar</item><item>Increíblemente rápido</item>"
+    }
+  }
+}

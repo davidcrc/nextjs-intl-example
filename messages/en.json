@@ -1,0 +1,28 @@
+{
+  "shared": {
+    "confirm": "Confirm message"
+  },
+  "home": {
+    "static": "Hello home world!",
+    "interpolation": "Hello {name}!",
+    "plural": "You have {numMessages, plural, =0 {no messages} =1 {one message} other {# messages}}.",
+    "select": "{gender, select, female {She} male {He} other {They}} is online.",
+    "selectordinal": "It's your {year, selectordinal, one {#st} two {#nd} few {#rd} other {#th}} birthday!",
+    "escaped": "Escape curly braces with single quotes (e.g. '{name'})"
+  },
+  "question": {
+    "static": "Hello world!",
+    "interpolation": "Hello {name}!",
+    "plural": "You have {numMessages, plural, =0 {no messages} =1 {one message} other {# messages}}.",
+    "select": "{gender, select, female {She} male {He} other {They}} is online.",
+    "selectordinal": "It's your {year, selectordinal, one {#st} two {#nd} few {#rd} other {#th}} birthday!",
+    "escaped": "Escape curly braces with single quotes (e.g. '{name'})",
+    "richText": "This is <important><very>very</very> important</important>",
+    "zero-config": "Works with zero config",
+    "customizable": "Easy to customize",
+    "fast": "Blazingly fast",
+    "Benefits": {
+      "items": "<item>Works with zero config</item><item>Easy to customize</item><item>Blazingly fast</item>"
+    }
+  }
+}
