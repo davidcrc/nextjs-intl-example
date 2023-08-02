@@ -2,18 +2,20 @@
 
 import Link from "next-intl/link";
 import { useLocale, useTranslations } from "next-intl";
+import { usePathname } from "next-intl/client";
 
 const Question = () => {
   const locale = useLocale();
+  const pathname = usePathname();
 
   const sharedM = useTranslations("shared");
   const t = useTranslations("question");
 
   return (
-    <div className="flex flex-col h-full p-4 gap-6">
+    <div className="flex flex-col h-full p-4 gap-6 text-white">
       <div className="flex gap-3">
         <Link
-          href="/question"
+          href={pathname}
           locale="en"
           className={`${
             locale === "en" ? "bg-slate-700 text-green-600" : "bg-slate-500"
@@ -23,7 +25,7 @@ const Question = () => {
         </Link>
 
         <Link
-          href="/question"
+          href={pathname}
           locale="es"
           className={`${
             locale === "es" ? "bg-slate-700 text-green-600" : "bg-slate-500"

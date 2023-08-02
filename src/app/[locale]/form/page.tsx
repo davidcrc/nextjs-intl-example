@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next-intl/client";
+import { usePathname, useRouter } from "next-intl/client";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 type Inputs = {
@@ -13,6 +13,8 @@ type Inputs = {
 const PersonalInfoForm = () => {
   const router = useRouter();
   const locale = useLocale();
+  const pathname = usePathname();
+
   const shared = useTranslations("shared");
   const t = useTranslations("form");
 
@@ -33,7 +35,7 @@ const PersonalInfoForm = () => {
   };
 
   const handleChangeLanguage = (selectedLocale: string) => {
-    router.push("/form", { locale: selectedLocale });
+    router.push(pathname, { locale: selectedLocale });
   };
 
   return (

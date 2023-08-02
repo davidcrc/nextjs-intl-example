@@ -55,7 +55,7 @@ const MyPage = () => {
         <br />
         <br />
       </div>
-      <h1>{intl("static")}</h1>
+      <h1 className="text-white">{intl("static")}</h1>
     </div>
   );
 };
