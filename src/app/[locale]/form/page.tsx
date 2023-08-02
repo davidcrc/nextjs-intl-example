@@ -35,7 +35,7 @@ const PersonalInfoForm = () => {
   };
 
   const handleChangeLanguage = (selectedLocale: string) => {
-    router.push(pathname, { locale: selectedLocale });
+    router.replace(pathname, { locale: selectedLocale });
   };
 
   return (
