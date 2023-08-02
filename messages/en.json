@@ -1,6 +1,7 @@
 {
   "shared": {
-    "confirm": "Confirm message"
+    "confirm": "Confirm message",
+    "send": "Send"
   },
   "home": {
     "static": "Hello home world!",
@@ -24,5 +25,10 @@
     "Benefits": {
       "items": "<item>Works with zero config</item><item>Easy to customize</item><item>Blazingly fast</item>"
     }
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone"
   }
 }

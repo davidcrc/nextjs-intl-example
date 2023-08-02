@@ -19,6 +19,15 @@ const MyPage = () => {
             To questions
           </Link>
         </div>
+        <div>
+          <Link
+            href="/form"
+            // locale={locale}  // maybe is not necessary send locale
+            className="bg-green-500 hover:bg-green-600 px-3 py-2"
+          >
+            To form
+          </Link>
+        </div>
 
         <br />
 

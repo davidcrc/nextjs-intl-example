@@ -1,6 +1,7 @@
 {
   "shared": {
-    "confirm": "Mensaje de confirmación"
+    "confirm": "Mensaje de confirmación",
+    "send": "Enviar"
   },
   "home": {
     "static": "¡Hola mundo del hogar!",
@@ -24,5 +25,10 @@
     "Benefits": {
       "items": "<item>Funciona sin necesidad de configuración</item><item>Fácil de personalizar</item><item>Increíblemente rápido</item>"
     }
+  },
+  "form": {
+    "name": "Nombre",
+    "email": "Correo",
+    "phone": "Telefono"
   }
 }

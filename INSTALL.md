@@ -13,3 +13,9 @@ npm i rtl-detect
 ```bash
 npm i --save-dev @types/rtl-detect
 ```
+
+- For testing form
+
+```bash
+npm i reac-hook-form
+```
