@@ -28,6 +28,14 @@ const MyPage = () => {
             To form
           </Link>
         </div>
+        <div>
+          <Link
+            href="/form2"
+            className="bg-green-500 hover:bg-green-600 px-3 py-2"
+          >
+            To form #2
+          </Link>
+        </div>
 
         <br />
 
