@@ -1,11 +1,16 @@
-import { useFormatter, useLocale, useTranslations } from "next-intl";
-import Link from "next-intl/link";
+"use client";
+// import { useFormatter, useLocale, useTranslations } from "next-intl";
+// import Link from "next-intl/link";
+
+import Link from "next/link";
+import { useLocaleContext } from "../context/LocaleContext";
 
 const MyPage = () => {
-  const locale = useLocale();
+  // const locale = useLocale();
 
-  const format = useFormatter();
-  const intl = useTranslations("home");
+  // const format = useFormatter();
+  // const intl = useTranslations("home");
+  const { locale, switchLanguage, messages } = useLocaleContext();
 
   return (
     <div className="flex flex-col p-8">
@@ -63,7 +68,7 @@ const MyPage = () => {
         <br />
         <br />
       </div>
-      <h1 className="text-white">{intl("static")}</h1>
+      <h1 className="text-white">{messages.home.static}</h1>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import useTextDirection from "@/hooks/useTextDirection";
 import { LocaleProvider } from "@/context/LocaleContext";
+import "./globals.css";
 
 export default function RootLayout({
   children,
