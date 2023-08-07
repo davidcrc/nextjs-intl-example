@@ -1,8 +1,10 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter } from "next-intl/client";
+// import { useLocale, useTranslations } from "next-intl";
+// import { usePathname, useRouter } from "next-intl/client";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useLocaleContext } from "@/context/LocaleContext";
+// import cookieCutter from "cookie-cutter";
 
 type Inputs = {
   name: string;
@@ -11,12 +13,17 @@ type Inputs = {
 };
 
 const PersonalInfoForm = () => {
-  const router = useRouter();
-  const locale = useLocale();
-  const pathname = usePathname();
+  // const router = useRouter();
+  // const locale = useLocale();
+  // const pathname = usePathname();
+  const { locale, switchLanguage, messages } = useLocaleContext();
 
-  const shared = useTranslations("shared");
-  const t = useTranslations("form");
+  // const shared = useTranslations("shared");
+  // const t = useTranslations("form");
+  const shared = messages.shared;
+  const t = messages.form;
+
+  console.log("T_T", t);
 
   const {
     register,
@@ -34,8 +41,12 @@ const PersonalInfoForm = () => {
     console.log(data);
   };
 
+  // console.log("pathname", pathname);
+
   const handleChangeLanguage = (selectedLocale: string) => {
-    router.replace(pathname, { locale: selectedLocale });
+    // router.push(`${pathname}?lang=${selectedLocale}`);
+    // cookieCutter.set("NEXT_LOCALE", selectedLocale);
+    switchLanguage(selectedLocale);
   };
 
   return (
@@ -63,7 +74,7 @@ const PersonalInfoForm = () => {
       </div>
       <div>
         <label htmlFor="name" className="block mb-1 text-white">
-          {t("name")}
+          {t?.["name"]}
         </label>
         <input
           type="text"
@@ -76,7 +87,7 @@ const PersonalInfoForm = () => {
 
       <div>
         <label htmlFor="email" className="block mb-1 text-white">
-          {t("email")}
+          {t?.["email"]}
         </label>
         <input
           type="email"
@@ -95,7 +106,7 @@ const PersonalInfoForm = () => {
 
       <div>
         <label htmlFor="phone" className="block mb-1 text-white">
-          {t("phone")}
+          {t?.["phone"]}
         </label>
         <input
           type="text"
@@ -116,7 +127,7 @@ const PersonalInfoForm = () => {
         type="submit"
         className="bg-blue-500 text-white px-4 py-2 rounded-md"
       >
-        {shared("send")}
+        {shared?.["send"]}
       </button>
     </form>
   );
